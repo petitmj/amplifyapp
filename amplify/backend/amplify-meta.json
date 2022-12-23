@@ -1,0 +1,57 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-authcra-dev-100421-authRole",
+      "UnauthRoleArn": "arn:aws:iam::106223594363:role/amplify-authcra-dev-100421-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::106223594363:role/amplify-authcra-dev-100421-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-authcra-dev-100421-deployment",
+      "UnauthRoleName": "amplify-authcra-dev-100421-unauthRole",
+      "StackName": "amplify-authcra-dev-100421",
+      "StackId": "arn:aws:cloudformation:us-east-1:106223594363:stack/amplify-authcra-dev-100421/14bc7530-8290-11ed-bcde-12be4e101797",
+      "AmplifyAppId": "d3h4viuf1hrrfh"
+    }
+  },
+  "auth": {
+    "authcra9db7cd7b": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-authcra-dev-100421-deployment/amplify-cfn-templates/auth/authcra9db7cd7b-cloudformation-template.json",
+        "logicalId": "authauthcra9db7cd7b"
+      },
+      "lastPushTimeStamp": "2022-12-23T10:01:15.603Z",
+      "output": {
+        "CreatedSNSRole": "arn:aws:iam::106223594363:role/sns9db7cd7b100421-dev",
+        "UserPoolId": "us-east-1_GEgJ7PP3D",
+        "AppClientIDWeb": "7umcb1nm1rj7svo0nh333ngdj0",
+        "AppClientID": "5i90tktrfamt9lp84cor352ik6",
+        "IdentityPoolId": "us-east-1:830991b4-bb09-46fa-b4b6-27b7c62f686b",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:106223594363:userpool/us-east-1_GEgJ7PP3D",
+        "IdentityPoolName": "authcra9db7cd7b_identitypool_9db7cd7b__dev",
+        "UserPoolName": "authcra9db7cd7b_userpool_9db7cd7b"
+      },
+      "lastPushDirHash": "YaPa8NfUNkCC+CDo79jHWhpYHgY="
+    }
+  }
+}

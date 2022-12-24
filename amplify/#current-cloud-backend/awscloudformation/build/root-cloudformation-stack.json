@@ -1,5 +1,5 @@
 {
-  "Description": "Root Stack for AWS Amplify CLI",
+  "Description": "Root Stack for AWS Amplify Console",
   "AWSTemplateFormatVersion": "2010-09-09",
   "Parameters": {
     "DeploymentBucketName": {
@@ -200,6 +200,54 @@
           },
           "breakCircularDependency": false,
           "dependsOn": "",
+          "env": "dev"
+        }
+      }
+    },
+    "apiauthcra": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-authcra-dev-100421-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "Parameters": {
+          "CreateAPIKey": 1,
+          "AppSyncApiName": "authcra",
+          "DynamoDBBillingMode": "PAY_PER_REQUEST",
+          "DynamoDBEnableServerSideEncryption": false,
+          "S3DeploymentBucket": "amplify-authcra-dev-100421-deployment",
+          "S3DeploymentRootKey": "amplify-appsync-files/8331a493a97cf5d3b11c40542a74e028a4c423ea",
+          "env": "dev"
+        }
+      }
+    },
+    "storageamplifyappimages001": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3.amazonaws.com/amplify-authcra-dev-100421-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "Parameters": {
+          "bucketName": "authcra8935d87309ef41229e11d8cc074b1d79",
+          "selectedGuestPermissions": "",
+          "selectedAuthenticatedPermissions": "s3:PutObject,s3:GetObject,s3:ListBucket,s3:DeleteObject",
+          "unauthRoleName": {
+            "Ref": "UnauthRoleName"
+          },
+          "authRoleName": {
+            "Ref": "AuthRoleName"
+          },
+          "s3PrivatePolicy": "Private_policy_64f7c94d",
+          "s3ProtectedPolicy": "Protected_policy_64f7c94d",
+          "s3PublicPolicy": "Public_policy_64f7c94d",
+          "s3ReadPolicy": "read_policy_64f7c94d",
+          "s3UploadsPolicy": "Uploads_policy_64f7c94d",
+          "authPolicyName": "s3_amplify_64f7c94d",
+          "unauthPolicyName": "s3_amplify_64f7c94d",
+          "AuthenticatedAllowList": "ALLOW",
+          "GuestAllowList": "DISALLOW",
+          "s3PermissionsAuthenticatedPrivate": "s3:PutObject,s3:GetObject,s3:DeleteObject",
+          "s3PermissionsAuthenticatedProtected": "s3:PutObject,s3:GetObject,s3:DeleteObject",
+          "s3PermissionsAuthenticatedPublic": "s3:PutObject,s3:GetObject,s3:DeleteObject",
+          "s3PermissionsAuthenticatedUploads": "s3:PutObject",
+          "s3PermissionsGuestPublic": "DISALLOW",
+          "s3PermissionsGuestUploads": "DISALLOW",
           "env": "dev"
         }
       }

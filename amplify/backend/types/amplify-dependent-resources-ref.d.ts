@@ -10,5 +10,17 @@ export type AmplifyDependentResourcesAttributes = {
             "AppClientID": "string",
             "CreatedSNSRole": "string"
         }
+    },
+    "api": {
+        "authcra": {
+            "GraphQLAPIIdOutput": "string",
+            "GraphQLAPIEndpointOutput": "string"
+        }
+    },
+    "storage": {
+        "amplifyappimages001": {
+            "BucketName": "string",
+            "Region": "string"
+        }
     }
 }

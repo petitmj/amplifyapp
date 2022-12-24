@@ -40,7 +40,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-authcra-dev-100421-deployment/amplify-cfn-templates/auth/authcra9db7cd7b-cloudformation-template.json",
         "logicalId": "authauthcra9db7cd7b"
       },
-      "lastPushTimeStamp": "2022-12-23T09:02:20.102Z",
+      "lastPushTimeStamp": "2022-12-24T09:35:02.632Z",
       "output": {
         "CreatedSNSRole": "arn:aws:iam::106223594363:role/sns9db7cd7b100421-dev",
         "UserPoolId": "us-east-1_GEgJ7PP3D",
@@ -52,6 +52,50 @@
         "UserPoolName": "authcra9db7cd7b_userpool_9db7cd7b"
       },
       "lastPushDirHash": "YaPa8NfUNkCC+CDo79jHWhpYHgY="
+    }
+  },
+  "api": {
+    "authcra": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "mznbc72gabcgfgggdadxujesji",
+        "GraphQLAPIEndpointOutput": "https://nnaprrba2bg25mtndcftw776rq.appsync-api.us-east-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-dki3wawuwjhlnjmua637do4jle"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-authcra-dev-100421-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiauthcra"
+      },
+      "lastPushTimeStamp": "2022-12-24T09:35:02.657Z",
+      "lastPushDirHash": "cEspzMJfToGUMzLxIvYWX5Bua14="
+    }
+  },
+  "storage": {
+    "amplifyappimages001": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "lastPushTimeStamp": "2022-12-24T09:35:03.941Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-authcra-dev-100421-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storageamplifyappimages001"
+      },
+      "output": {
+        "BucketName": "authcra8935d87309ef41229e11d8cc074b1d79100421-dev",
+        "Region": "us-east-1"
+      },
+      "lastPushDirHash": "YrpDwAl1sOZbTcCiJrRH+q/eDGM="
     }
   }
 }

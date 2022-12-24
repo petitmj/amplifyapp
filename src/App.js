@@ -30,7 +30,7 @@ const App = ({ signOut }) => {
     const notesFromAPI = apiData.data.listNotes.items;
     await Promise.all(
       notesFromAPI.map(async (note) => {
-        if (note) {
+        if (note.Image) {
           const url = await Storage.get(note.name);
           note.image = url;
         }
@@ -114,6 +114,13 @@ const App = ({ signOut }) => {
               {note.name}
             </Text>
             <Text as="span">{note.description}</Text>
+            {note.image && (
+              <Image
+                src={note.image}
+                alt={`visual aid for ${notes.name}`}
+                style={{ width: 400 }}
+              />
+            )}
             <Button variation="link" onClick={() => deleteNote(note)}>
               Delete note
             </Button>

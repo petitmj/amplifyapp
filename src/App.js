@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import "@aws-amplify/ui-react/styles.css";
-import { API } from "aws-amplify";
+import { API,Storage } from "aws-amplify";
 import {
   Button,
   Flex,
@@ -127,6 +127,7 @@ const App = ({ signOut }) => {
           </Flex>
         ))}
       </View>
+
       <Button onClick={signOut}>Sign Out</Button>
     </View>
     
